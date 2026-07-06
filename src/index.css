@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #0B1F3B;
+  --gold: #C9962E;
+  --gold-hover: #b08225;
+  --cream: #F6F1E4;
+  --ivory: #FFFFF0;
+  --navy-10: rgba(11, 31, 59, 0.1);
+  --navy-20: rgba(11, 31, 59, 0.2);
+  --navy-60: rgba(11, 31, 59, 0.6);
+  --navy-80: rgba(11, 31, 59, 0.8);
+  --background: 0 0% 100%;
+  --foreground: 0 0% 3.9%;
+  --border: 0 0% 89.8%;
+  --input: 0 0% 89.8%;
+  --ring: 0 0% 3.9%;
+  --radius: 0.5rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--cream);
+  color: var(--navy);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-display {
+  font-family: 'Fraunces', Georgia, serif;
+  font-optical-sizing: auto;
+}
+
+.font-body {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-script {
+  font-family: 'Dancing Script', cursive;
+}
+
+/* Passport stamp */
+.stamp {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 2px dashed var(--gold);
+  color: var(--gold);
+  padding: 1rem;
+  aspect-ratio: 1 / 1;
+  text-align: center;
+  transition: transform 0.4s ease;
+  background: transparent;
+}
+.stamp::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border-radius: 9999px;
+  border: 1px solid rgba(201, 150, 46, 0.35);
+  pointer-events: none;
+}
+.stamp-r3 { transform: rotate(-3deg); }
+.stamp-r5 { transform: rotate(4deg); }
+.stamp-r7 { transform: rotate(-6deg); }
+.stamp-r9 { transform: rotate(7deg); }
+.stamp:hover { transform: rotate(0deg) scale(1.03); }
+
+.overline {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.btn-gold {
+  background-color: var(--gold);
+  color: var(--navy);
+  padding: 0.85rem 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  transition: background 0.25s ease, transform 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+.btn-gold:hover { background-color: var(--gold-hover); transform: translateY(-1px); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--navy);
+  padding: 0.85rem 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  border: 1px solid var(--navy);
+  transition: background 0.25s ease, color 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+.btn-ghost:hover { background: var(--navy); color: var(--cream); }
+
+.btn-outline-gold {
+  background: transparent;
+  color: var(--gold);
+  padding: 0.85rem 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  border: 1px solid var(--gold);
+  transition: background 0.25s ease, color 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+.btn-outline-gold:hover { background: var(--gold); color: var(--navy); }
+
+.card-lift {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.3s ease;
+}
+.card-lift:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+}
+
+.prog-card .prog-underline {
+  display: block;
+  width: 32px;
+  height: 2px;
+  background: var(--gold);
+  transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.prog-card:hover .prog-underline { width: 96px; }
+
+.nav-link {
+  position: relative;
+  padding: 0.25rem 0;
+  color: var(--cream);
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+.nav-link.active { color: var(--gold); }
+
+.timeline-node {
+  width: 44px;
+  height: 44px;
+  border-radius: 9999px;
+  background: var(--cream);
+  border: 2px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Fraunces', serif;
+  color: var(--navy);
+  font-weight: 500;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.field-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(11, 31, 59, 0.25);
+  padding: 0.75rem 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--navy);
+  width: 100%;
+  outline: none;
+  transition: border-color 0.25s ease;
+  font-size: 0.95rem;
+}
+.field-input:focus {
+  border-bottom-color: var(--gold);
+}
+.field-input::placeholder { color: rgba(11, 31, 59, 0.4); }
+
+.gold-rule {
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: var(--gold);
+}
+
+@keyframes flightPath {
+  from { stroke-dashoffset: 400; }
+  to { stroke-dashoffset: 0; }
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--navy-20); }
+::-webkit-scrollbar-thumb:hover { background: var(--navy-60); }
+
+@layer base {
+  * { border-color: rgba(11, 31, 59, 0.1); }
+}
