@@ -160,7 +160,7 @@ export const FACULTY = [
 ];
 
 export const SOCIALS = [
-  { name: "Instagram", href: "#", icon: "instagram" },
+  { name: "Instagram", href: "https://www.instagram.com/gradquestsol", icon: "instagram" },
   { name: "Facebook", href: "#", icon: "facebook" },
   { name: "WhatsApp", href: "#", icon: "whatsapp" },
   { name: "LinkedIn", href: "#", icon: "linkedin" },

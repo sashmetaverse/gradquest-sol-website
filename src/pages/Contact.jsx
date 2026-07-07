@@ -4,6 +4,9 @@ import Reveal from "../components/Reveal";
 import SocialIcon from "../components/SocialIcon";
 import { BRAND, PROGRAMMES, SOCIALS } from "../lib/content";
 
+const FORMSPREE_URL = "https://formspree.io/f/xdarjaeo"; // paste your Formspree endpoint
+const SHEETS_URL = "https://script.google.com/macros/s/AKfycby-hLpx4tvmqLXn81gxRdYT_ldeuOMkL5KyxIz7CyjHuPVs5W5xSE4dLGxskh-2EW5RPw/exec"; // paste your Apps Script URL
+
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", phone: "", programme: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
@@ -13,13 +16,43 @@ export default function Contact() {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e) => {
+const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!form.name || !form.email || !form.message) {
-      setError("Please share your name, email and message so we can reply.");
+    if (!form.name || !form.email || !form.phone) {
+      setError("Please share your name, email and phone number so we can reply.");
+      return;
+    }
+    if (!/^\d{10}$/.test(form.phone)) {
+      setError("Please enter a valid 10-digit phone number.");
       return;
     }
     setError("");
+
+    const payload = {
+      name: form.name,
+      email: form.email,
+      phone: form.phone,
+      programme: form.programme,
+      message: form.message,
+    };
+
+    fetch(SHEETS_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify(payload),
+    }).catch(() => {});
+
+    try {
+      await fetch(FORMSPREE_URL, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: new FormData(e.target),
+      });
+    } catch (err) {
+      // email send failed silently — enquiry may still be logged in Sheets
+    }
+
     setSubmitted(true);
   };
 
@@ -119,7 +152,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <label className="overline block mb-2" htmlFor="c-phone">Phone</label>
-                      <input id="c-phone" name="phone" type="tel" value={form.phone} onChange={handleChange} data-testid="contact-input-phone" className="field-input" placeholder="+91 99…" />
+                      <input id="c-phone" name="phone" type="tel" value={form.phone} onChange={handleChange} data-testid="contact-input-phone" className="field-input" placeholder="9953159202" maxLength={10} required />
                     </div>
                     <div className="relative">
                       <label className="overline block mb-2" htmlFor="c-prog">Programme of Interest</label>
@@ -136,7 +169,7 @@ export default function Contact() {
 
                   <div>
                     <label className="overline block mb-2" htmlFor="c-msg">Your Message</label>
-                    <textarea id="c-msg" name="message" rows="4" value={form.message} onChange={handleChange} data-testid="contact-input-message" className="field-input resize-none" placeholder="Tell us a little about your goals…" required />
+                    <textarea id="c-msg" name="message" rows="4" value={form.message} onChange={handleChange} data-testid="contact-input-message" className="field-input resize-none" placeholder="Tell us a little about your goals…" />
                   </div>
 
                   {error && (
