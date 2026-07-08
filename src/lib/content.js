@@ -161,8 +161,8 @@ export const FACULTY = [
 
 export const SOCIALS = [
   { name: "Instagram", href: "https://www.instagram.com/gradquestsol", icon: "instagram" },
-  { name: "Facebook", href: "#", icon: "facebook" },
-  { name: "WhatsApp", href: "#", icon: "whatsapp" },
+  { name: "Facebook", href: "https://www.facebook.com/profile.php?id=61591766213563", icon: "facebook" },
+  { name: "WhatsApp", href: "https://api.whatsapp.com/send/?phone=919717488181&text=Hi!%20I%20went%20through%20your%20page%20and%20I'm%20interested%20in%20the%20programmes%20offered%20by%20GradQuest.%20I'd%20like%20to%20know%20more.", icon: "whatsapp" },
   { name: "LinkedIn", href: "#", icon: "linkedin" },
   { name: "YouTube", href: "#", icon: "youtube" },
 ];
