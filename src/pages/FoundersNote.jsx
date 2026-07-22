@@ -1,6 +1,5 @@
 import React from "react";
 import Reveal from "../components/Reveal";
-import PhotoSlot from "../components/PhotoSlot";
 
 export default function FoundersNote() {
   return (
@@ -22,7 +21,9 @@ export default function FoundersNote() {
             <div className="lg:col-span-4">
               <Reveal>
                 <div className="relative" data-testid="founder-photo-placeholder">
-                  <PhotoSlot id="founder-photo" label="Founder Photo" aspectClass="aspect-[3/4]" />
+                  <div className="w-full aspect-[3/4] overflow-hidden">
+                    <img src="/images/sash.png" alt="Founder" className="w-full h-full object-cover" />
+                  </div>
                   <div
                     className="absolute -bottom-6 -right-6 w-24 h-24 rounded-full border-2 border-dashed rotate-6 hidden md:flex items-center justify-center bg-[#F6F1E4] pointer-events-none"
                     style={{ borderColor: "#C9962E", color: "#C9962E" }}
@@ -61,7 +62,7 @@ export default function FoundersNote() {
 
                   <div className="mt-12 pt-8" style={{ borderTop: "1px solid rgba(11,31,59,0.15)" }}>
                     <div className="font-script text-4xl md:text-5xl mb-2" style={{ color: "#0B1F3B" }} data-testid="founder-signature-placeholder" aria-label="Signature placeholder">
-                      [Insert founder name]
+                      [Saswati Sanyal]
                     </div>
                     <div className="overline mt-1">Founder · GradQuest Sol</div>
                   </div>

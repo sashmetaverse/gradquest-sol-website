@@ -153,10 +153,10 @@ export const APPROACH = [
 ];
 
 export const FACULTY = [
-  { name: "Faculty Name", role: "IELTS Trainer" },
-  { name: "Faculty Name", role: "SAT Mentor" },
-  { name: "Faculty Name", role: "IB / IG Tutor" },
-  { name: "Faculty Name", role: "Study Abroad Counsellor" },
+  { name: "Faculty Name", role: "IELTS Trainer", photo: "/images/sash.png" },
+  { name: "Faculty Name", role: "SAT Mentor", photo: "/images/sash.png" },
+  { name: "Faculty Name", role: "IB / IG Tutor", photo: "/images/sash.png" },
+  { name: "Faculty Name", role: "Study Abroad Counsellor", photo: "/images/sash.png" },
 ];
 
 export const SOCIALS = [

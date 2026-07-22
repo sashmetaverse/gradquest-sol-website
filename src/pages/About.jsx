@@ -139,17 +139,13 @@ export default function About() {
                 </h2>
               </Reveal>
             </div>
-            <Reveal delay={0.05}>
-              <p className="text-xs tracking-[0.24em] uppercase max-w-xs" style={{ color: "#C9962E" }}>
-                Click any photo box below to upload the real faculty photo
-              </p>
-            </Reveal>
+
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {FACULTY.map((f, i) => (
               <Reveal key={i} delay={i * 0.06}>
-                <FacultyPlaceholder name={f.name} role={f.role} testid={`faculty-card-${i}`} />
+                <FacultyPlaceholder name={f.name} role={f.role} photo={f.photo} testid={`faculty-card-${i}`} />
               </Reveal>
             ))}
           </div>

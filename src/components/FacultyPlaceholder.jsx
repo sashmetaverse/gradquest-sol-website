@@ -1,17 +1,11 @@
 import React from "react";
-import PhotoSlot from "./PhotoSlot";
 
-// Faculty / mentor card. Click the photo area to upload a real picture —
-// it replaces the placeholder immediately and is remembered by the browser.
-export default function FacultyPlaceholder({ name, role, testid }) {
+export default function FacultyPlaceholder({ name, role, photo, testid }) {
   return (
     <div data-testid={testid} className="card-lift border bg-[#FFFFF0] p-6 flex flex-col" style={{ borderColor: "rgba(11,31,59,0.12)" }}>
-      <PhotoSlot
-        id={testid || name}
-        label="Faculty Photo"
-        aspectClass="aspect-[3/4]"
-        testid={testid ? `${testid}-photo` : undefined}
-      />
+      <div className="w-full aspect-[3/4] overflow-hidden" style={{ backgroundColor: "rgba(11,31,59,0.04)" }}>
+        <img src={photo} alt={name} className="w-full h-full object-cover" />
+      </div>
       <div className="mt-5">
         <div className="font-display text-lg" style={{ color: "#0B1F3B" }}>
           {name}
