@@ -22,7 +22,7 @@ export default function CoFoundersNote() {
               <Reveal>
                 <div className="relative" data-testid="cofounder-photo-placeholder">
                   <div className="w-full aspect-[3/4] overflow-hidden">
-                    <img src="/images/sash.png" alt="Co-Founder" className="w-full h-full object-cover" />
+                    <img src="/images/ts.png" alt="Co-Founder" className="w-full h-full object-cover" />
                   </div>
                   <div
                     className="absolute -bottom-6 -right-6 w-24 h-24 rounded-full border-2 border-dashed rotate-6 hidden md:flex items-center justify-center bg-[#F6F1E4] pointer-events-none"
