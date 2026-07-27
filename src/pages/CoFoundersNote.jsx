@@ -48,10 +48,10 @@ export default function CoFoundersNote() {
                     For over fifteen years, education has been more than a career for me — it has been a calling. I have sat with hundreds of students across the IB, IGCSE and CBSE boards, and no two journeys ever looked the same. Some needed help finding their academic footing, others needed a language unlocked, and many simply needed someone to believe they could go further than they thought possible.
                   </p>
                   <p className="text-lg leading-relaxed mb-6">
-                    [That experience is why GradQuest Sol exists in the way it does. Alongside my work with Future Minds, I have always believed that academic excellence and personal mentorship cannot be separated — a student's marks matter, but so does the confidence, curiosity and clarity they carry into the world.]
+                    That experience is why GradQuest Sol exists in the way it does. Alongside my work with Future Minds, I have always believed that academic excellence and personal mentorship cannot be separated — a student's marks matter, but so does the confidence, curiosity and clarity they carry into the world.
                   </p>
                   <p className="text-lg leading-relaxed mb-6">
-                    I believe every student deserves guidance that is personal, not generic — training that stretches across academics, language, and life skills, tailored to who they are and where they want to go. That belief has shaped every programme we have built here.]
+                    I believe every student deserves guidance that is personal, not generic — training that stretches across academics, language, and life skills, tailored to who they are and where they want to go. That belief has shaped every programme we have built here.
                   </p>
                   <p className="text-lg leading-relaxed mb-10">
                     Wherever the journey leads, we hope to be walking beside you.
