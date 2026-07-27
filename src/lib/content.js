@@ -13,6 +13,7 @@ export const NAV_LINKS = [
   { to: "/programmes", label: "Programmes" },
   { to: "/about", label: "About" },
   { to: "/founders-note", label: "Founder's Note" },
+  { to: "/cofounders-note", label: "Co-Founder's Note" },
   { to: "/privacy-policy", label: "Privacy" },
 ];
 

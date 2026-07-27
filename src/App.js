@@ -8,6 +8,7 @@ import Home from "@/pages/Home";
 import Programmes from "@/pages/Programmes";
 import About from "@/pages/About";
 import FoundersNote from "@/pages/FoundersNote";
+import CoFoundersNote from "@/pages/CoFoundersNote";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import Contact from "@/pages/Contact";
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/programmes" element={<Programmes />} />
           <Route path="/about" element={<About />} />
           <Route path="/founders-note" element={<FoundersNote />} />
+          <Route path="/cofounders-note" element={<CoFoundersNote />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Home />} />
