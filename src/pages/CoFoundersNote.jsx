@@ -45,13 +45,13 @@ export default function CoFoundersNote() {
                     Dear student, dear parent,
                   </p>
                   <p className="text-lg leading-relaxed mb-6">
-                    [Write the co-founder's own opening story here — replace this placeholder paragraph.]
+                    For over fifteen years, education has been more than a career for me — it has been a calling. I have sat with hundreds of students across the IB, IGCSE and CBSE boards, and no two journeys ever looked the same. Some needed help finding their academic footing, others needed a language unlocked, and many simply needed someone to believe they could go further than they thought possible.
                   </p>
                   <p className="text-lg leading-relaxed mb-6">
-                    [Second paragraph — their perspective on why GradQuest Sol exists.]
+                    [That experience is why GradQuest Sol exists in the way it does. Alongside my work with Future Minds, I have always believed that academic excellence and personal mentorship cannot be separated — a student's marks matter, but so does the confidence, curiosity and clarity they carry into the world.]
                   </p>
                   <p className="text-lg leading-relaxed mb-6">
-                    [Third paragraph — what they personally believe in / stand for.]
+                    I believe every student deserves guidance that is personal, not generic — training that stretches across academics, language, and life skills, tailored to who they are and where they want to go. That belief has shaped every programme we have built here.]
                   </p>
                   <p className="text-lg leading-relaxed mb-10">
                     Wherever the journey leads, we hope to be walking beside you.
@@ -59,7 +59,7 @@ export default function CoFoundersNote() {
 
                   <div className="mt-12 pt-8" style={{ borderTop: "1px solid rgba(11,31,59,0.15)" }}>
                     <div className="font-script text-4xl md:text-5xl mb-2" style={{ color: "#0B1F3B" }} data-testid="cofounder-signature-placeholder" aria-label="Signature placeholder">
-                      [Insert co-founder name]
+                      [Tanya Sharma]
                     </div>
                     <div className="overline mt-1">Co-Founder · GradQuest Sol</div>
                   </div>
